@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import classes from "./App.module.css";
 import UserContext from './store/User/user-context';
 import { v4 as uuidv4 } from "uuid";
+import List from './components/List';
 
 function App() {
   const { users, loadUsers } = useContext(UserContext);
@@ -55,6 +56,7 @@ function App() {
 
   return (
     <div className={classes.app}>
+      <List />
     </div>
   )
 }
