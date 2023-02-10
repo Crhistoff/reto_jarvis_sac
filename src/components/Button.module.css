@@ -1,0 +1,20 @@
+.button {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    backface-visibility: hidden;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #4472c4;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}
+
+.button:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}

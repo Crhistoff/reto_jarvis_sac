@@ -3,6 +3,18 @@ import classes from "./App.module.css";
 import UserContext from './store/User/user-context';
 import { v4 as uuidv4 } from "uuid";
 import List from './components/List';
+import Button from './components/Button';
+import { CSVLink } from "react-csv";
+
+const headers = [
+  { label: "Nombre", key: "name" },
+  { label: "Apellido", key: "lastName" },
+  { label: "Edad", key: "age" },
+  { label: "Genero", key: "gender" },
+  { label: "Email", key: "email" },
+  { label: "Nacionalidad", key: "nat" },
+  { label: "Foto", key: "photo" },
+];
 
 function App() {
   const { users, loadUsers } = useContext(UserContext);
@@ -56,6 +68,11 @@ function App() {
 
   return (
     <div className={classes.app}>
+      <Button>
+        <CSVLink data={users} headers={headers} filename='data.csv'>
+          Descargar CSV
+        </CSVLink>
+      </Button>
       <List />
     </div>
   )
